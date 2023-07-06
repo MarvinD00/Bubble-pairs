@@ -132,7 +132,7 @@ public class UI extends JFrame implements ActionListener {
 	//textpanel above the game
 	public static JPanel textPanel() {
 		JPanel textPanel = new JPanel();
-		JLabel text = new JLabel("Bubble Pairs by Jan Schubert and Okan Taskan v 1.0");
+		JLabel text = new JLabel("Bubble Pairs v 1.0");
 		textPanel.add(text);
 		return textPanel;
 	}
@@ -252,12 +252,12 @@ public class UI extends JFrame implements ActionListener {
 			turnPanel();
 			//if there is no  button left (e.g. player has won the game)
 			if(spielfeld.checkWinner()) {
-				switch(JOptionPane.showOptionDialog(null, "Herzlichen Glückwunsch sie haben " + spieler.getVersuche() + 
-						" Versuche gebraucht" + "\n Wollen sie erneut spielen oder zurück zum Hauptmenü?",
+				switch(JOptionPane.showOptionDialog(null, "Herzlichen GlÃ¼ckwunsch sie haben " + spieler.getVersuche() + 
+						" Versuche gebraucht" + "\n Wollen sie erneut spielen oder zurÃ¼ck zum HauptmenÃ¼?",
 						"",
 		                JOptionPane.YES_NO_CANCEL_OPTION,
 		                JOptionPane.WARNING_MESSAGE, null, 
-		                new String[]{"Erneut spielen", "zurück zum Hauptmenü","Spiel verlassen"}, "B")) {
+		                new String[]{"Erneut spielen", "zurÃ¼ck zum HauptmenÃ¼","Spiel verlassen"}, "B")) {
 		                case JOptionPane.YES_OPTION : resetGame(); break;
 		                case JOptionPane.NO_OPTION : this.setContentPane(menuPanel); this.pack(); break;
 		                case JOptionPane.CANCEL_OPTION : this.dispose(); break;
@@ -334,10 +334,10 @@ public class UI extends JFrame implements ActionListener {
 		
 		//if "anleitung" button is clicked it shows a message dialog with instructions on how to play
 		if(e.getSource() == menuButtons[1]) {
-			JOptionPane.showMessageDialog(null,"Versuchen sie alle Paare zu finden, indem sie mit der Maus auf einen der schwarzen Knöpfe klicken,"
+			JOptionPane.showMessageDialog(null,"Versuchen sie alle Paare zu finden, indem sie mit der Maus auf einen der schwarzen KnÃ¶pfe klicken,"
 					+ "\n das Feld dreht sich nach jedem Spielzug (wenn die karten aufgedeckt wurden) um 90 Grad nach rechts"
-					+ "\n Sie haben gewonnen, wenn keine Karten mehr übrig sind"
-					+ "\n Ziel ist es mit so wenig versuchen wie Möglich alle karten aufzudecken","Anleitung", JOptionPane.INFORMATION_MESSAGE);
+					+ "\n Sie haben gewonnen, wenn keine Karten mehr Ã¼brig sind"
+					+ "\n Ziel ist es mit so wenig versuchen wie MÃ¶glich alle karten aufzudecken","Anleitung", JOptionPane.INFORMATION_MESSAGE);
 		}
 		
 		//if "spiel verlassen" button is clicked the application is closed
